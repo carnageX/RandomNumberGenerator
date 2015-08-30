@@ -1,0 +1,26 @@
+﻿<Window x:Class="RandomNumberGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomNumberGenerator"
+        mc:Ignorable="d"
+        Title="Random Number Generator" Height="333.803" Width="475.264" Background="#FFE6E6E6">
+    <Grid>
+        <Button x:Name="button" Content="Go!" Command="{Binding CmdGenerate}"
+                HorizontalAlignment="Left" Margin="218,12,0,0" VerticalAlignment="Top" Width="32"/>
+        <Label x:Name="label" Content="Numbers to Generate:
+               " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="126"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="141,12,0,0" TextWrapping="Wrap" Text="{Binding NumsToGenerate}" VerticalAlignment="Top" Width="72"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="65" Margin="10,55,0,0" TextWrapping="Wrap" Text="{Binding RandomNumListAlpha}" VerticalAlignment="Top" Width="243" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="65" Margin="10,125,0,0" TextWrapping="Wrap" Text="{Binding RandomNumListBravo}" VerticalAlignment="Top" Width="243" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="65" Margin="10,195,0,0" TextWrapping="Wrap" Text="{Binding RandomNumListCharlie}" VerticalAlignment="Top" Width="243" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+        <Label x:Name="label1" Content="Count within 1 - 12: " HorizontalAlignment="Left" Margin="258,125,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Count within 1 - 12: " HorizontalAlignment="Left" Margin="258,193,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="{Binding BravoListCount}" HorizontalAlignment="Left" Margin="380,125,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="label4" Content="{Binding CharlieListCount}" HorizontalAlignment="Left" Margin="380,193,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="label5" Content="Total Count within 1 - 12:" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="{Binding BravoCharlieCount}" HorizontalAlignment="Left" Margin="158,265,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
